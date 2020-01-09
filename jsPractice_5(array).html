@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        var member = ['ddd5733', 'toto', 'sleeping'];
+        alert(member);
+
+        function get_members() {
+            return ['ddd5733', 'toto', 'sleeping', '잠온다'];
+        }
+        var members = get_members();
+        document.write(members[0].toUpperCase() + "<br/>");
+        document.write(members[1].toUpperCase() + "<br/>");
+        document.write(members[2].toUpperCase() + "<br/>");
+        document.write(members[3].toUpperCase() + "<br/>");
+        //toUpperCase(); >> 소문자를 대문자로 바꾸어준다.
+
+        for (var i = 0; i < members.length; i++) {
+            document.write(members[i].toUpperCase());
+        }
+        var li = ['a', 'b', 'c', 'd'];
+        li.push('e'); //배열뒤에 원소추가
+        li.unshift('f') //배열앞에 원소추가
+        li.splice(1, 0, 'z', 'h'); //원하는 배열에 원소추가
+        li.shift(); // 앞에 배열 삭제
+        li.sort(); // 순서 정렬
+        li.reverse(); //역순 정렬
+        alert(li);
+    </script>
+</body>
+
+</html>
