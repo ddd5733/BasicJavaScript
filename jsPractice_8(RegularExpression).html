@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        // var str = "a";
+        // alert(str);
+        // var pattern = /a/;
+        // alert(pattern);
+        // var pattern = new RegExp(str);
+        // alert(pattern);
+        // //정규 표현식의 패턴을 찾아주는거
+
+        // var pattern = /a/;
+        // //패턴을 만들고
+        // pattern.exec('grjdlrklkdjnasadasaqwierjaa');
+        // //괄호안에 찾고자 하는 영역
+        // pattern = /a./;
+        // //a와 어떤문자를 찾는 패턴
+        // pattern.exec('grjdlrklkdjnasadasaqwierjaa');
+        // pattern = /a/;
+        // pattern.exec('qwee');
+        // //리턴값 null
+        // pattern.test('abcde');
+        // //return true
+        // pattern.test('bcde');
+        // //return false
+
+        var pattern = /a/;
+        var str = "abcd";
+        str.match(pattern);
+        str = 'abcdef';
+        str.replace(pattern, 'A');
+        //치환시켜줌
+
+        //i는 대소구별을 없애줌
+        var xi = /a/;
+        "Abcde".match(xi);
+        //return null
+        var oi = /a/i;
+        "Abcde".match(oi);
+        //return null 아님
+        var xg = /a/;
+        "abcdea".match(xg);
+        //a가 한번
+        var og = /a/g;
+        "abcdea".match(og);
+        //a가 두개 리턴됨
+        var ig = /a/ig;
+        "AbcdeAraa".match(ig);
+        //대소 모든 패턴을 가져와서 추출해줌
+    </script>
+</body>
+
+</html>

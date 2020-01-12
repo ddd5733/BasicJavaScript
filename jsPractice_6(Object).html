@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <ul>
+        <script type="text/javascript">
+            //개체만들기
+            var index = {
+                'ddd5733': 10,
+                'tjddyd5733': 60,
+                'lalala': 80
+            };
+            var index2 = {};
+            index2['fir'] = 1;
+            index2['se'] = 2;
+            index2['th'] = 3;
+
+            console.log(index2['fi' + 'r']);
+
+            var index3 = new Object();
+            index3['fir'] = 1;
+            index3['se'] = 2;
+            index3['th'] = 3;
+            //객체는 순서는 없지만 key와 value가 있음
+
+            //객체활용
+            for (var kiss in index3) {
+                document.write("<li>key : " + kiss + "  value : " + index3[kiss] + "</li>")
+            }
+
+            //객체의 저장된값을 불러온다.
+            for (var chaos in index3) {
+                console.log(chaos);
+            };
+            //for in문 배열도 사용가능
+            // for(변수 in){}; forin문 기본
+            var arr = ['a', 'b', 'c'];
+            for (var key in arr) {
+                console.log(key);
+            }
+            //객체에 함수 넣고 객체 넣기
+            //this 는 함수가 소속된 객체를 가르킨다.
+            var grades = {
+                'list': {
+                    'egoing': 10,
+                    'k8805': 8,
+                    'nicalras': 80
+                },
+                'show': function() {
+                    for (var name in this.list) {
+                        console.log(name, this.list[name]); //자신의 value 검사 
+                    }
+                }
+            };
+            alert(grades['list']['egoing']);
+            grades.show();
+            //오브젝트함수일경우 실행법
+        </script>
+    </ul>
+</body>
+
+</html>
