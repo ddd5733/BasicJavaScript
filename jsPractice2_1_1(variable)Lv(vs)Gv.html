@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        var vscope = 'global';
+        // //전역변수
+        // function fscope() {
+        //     var vscope = 'local';
+        //     var lv = 'local var';
+        //     //지역변수
+        //     alert(vscope);
+        //     alert(lv);
+        // }
+
+        // function fscope2() {
+        //     alert(vscope);
+        // }
+
+        // function fscope3() {
+        //     vscope = '123';
+        // }
+        // fscope();
+        // //지역변수가 출력됨
+        // fscope2();
+        // //전역변수가 출력됨
+        // alert(lv);
+        // //전역변수인 lv가 존재하지 않아서 undefined 가 출력됨
+        //  fscope3();
+        // alert(vscope);
+        // //123 이 출력됨
+        function fscope4() {
+            var vscope = 'local';
+            vscope = 'local';
+        }
+        fscope4();
+        alert(vscope);
+        //전역변수가 출력됨
+    </script>
+</body>
+
+</html>
