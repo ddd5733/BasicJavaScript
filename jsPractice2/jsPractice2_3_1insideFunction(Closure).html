@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        function outter() {
+            var title = 'coding everybody';
+
+            function inner() {
+                alert(title);
+                //내부함수의 지역변수중에 title이 없으면 외부 함수의 지역변수에서 변수를 찾아온다
+            }
+            inner();
+        }
+        outter();
+    </script>
+</body>
+
+</html>

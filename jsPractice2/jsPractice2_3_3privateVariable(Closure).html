@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        function factory_movie(title) {
+            return {
+                get_title: function() {
+                    return title;
+                    //외부함수의 지역변수를 리턴해주는매소드
+                },
+                set_title: function(_title) {
+                    if (typeof _title === 'String') {
+                        //함수인자가 String 인지 확인시켜주는 거
+                        title = _title
+                    } else {
+                        alert('제목은 문자열이여야 합니다.')
+                    }
+
+                    //외부함수의 지역변수를 바꿔주는 매소드
+                }
+
+            }
+        }
+        ghost = factory_movie('Ghost in the shell');
+        matrix = factory_movie('Matrix');
+
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+        ghost.set_title('공각기동대');
+        alert(ghost.get_title());
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+    </script>
+</body>
+
+</html>
