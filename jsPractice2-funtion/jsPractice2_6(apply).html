@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        function func() {}
+        func();
+        //js내부 함수
+
+        function sum2(arg1, arg2) {
+            return arg1 + arg2;
+        }
+        // alert(sum2.apply(null, [1, 2]))
+        //함수.apply(첫인자(null), 두번째인자(배열))
+        o1 = {
+            val1: 1,
+            val2: 2,
+            val3: 3,
+        }
+        o2 = {
+            v1: 10,
+            v2: 50,
+            v3: 100,
+            v4: 25
+        }
+
+        function sum() {
+            var _sum = 0;
+            for (name in this) {
+                //위에 것만 봤을땐 this는 정해 지지 않았고 호풀할때 정해짐
+                _sum += this[name];
+            }
+            return _sum;
+        }
+        alert(sum.apply(o1)) // 6
+            //함수.apply('객체')
+        alert(sum.apply(o2)) // 185
+
+        //apply는 함수에 객체나 배열을 쓰고 싶을때사용? 아마도
+    </script>
+</body>
+
+</html>
